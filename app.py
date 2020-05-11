@@ -34,9 +34,9 @@ select = st.sidebar.selectbox('Visualization type', ['Histogram', 'Pie chart'],k
 sentiment_count = data['airline_sentiment'].value_counts()
 # st.write(sentiment_count)
 sentiment_count = pd.DataFrame({'Sentiment':sentiment_count.index, 'Tweets':sentiment_count.values})
-st.write(sentiment_count)
+# st.write(sentiment_count)
 
-if not st.sidebar.checkbox("Hide", True):
+if not st.sidebar.checkbox("Hide"):
     st.markdown("### Number of tweets by sentiment")
     if select == 'Histogram':
         fig = px.bar(sentiment_count,x='Sentiment',y='Tweets',color='Tweets', height=500)
@@ -53,11 +53,11 @@ hour = st.sidebar.slider("Hour of day", 0, 23)
 modified_data = data[data['tweet_created'].dt.hour == hour]
 # st.write(modified_data)
 
-if not st.sidebar.checkbox("Close", True, key='1'):
+if not st.sidebar.checkbox("Close", key='1'):
     st.markdown("### Tweets locations based on the time of day")
     st.markdown("%i tweets between %i:00 and %i:00" % (len(modified_data), hour, (hour+1)%24))
     st.map(modified_data)
-    if st.sidebar.checkbox("Show raw data", False):
+    if st.sidebar.checkbox("Show raw data", True):
         st.write(modified_data)
 
 st.sidebar.subheader("Breakdown airline tweets by sentiment")
