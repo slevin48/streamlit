@@ -20,6 +20,17 @@ Using [pipenv](https://pipenv.pypa.io/)
 Video tutorial: https://www.youtube.com/watch?v=skpiLtEN3yk
 Associated blogpost: https://blog.jcharistech.com/2019/10/24/how-to-deploy-your-streamlit-apps-to-heroku/
 
+```
+heroku login
+```
+```
+heroku create
+```
+[Deploy the app](https://devcenter.heroku.com/articles/getting-started-with-python#deploy-the-app):
+```
+git push heroku master
+```
+
 ### Required files
 1. setup.sh
 2. [Procfile](https://devcenter.heroku.com/articles/procfile)
