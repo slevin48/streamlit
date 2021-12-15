@@ -1,4 +1,4 @@
-# streamlit
+# streamlit [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/slevin48/streamlit/app.py)
 A crash course to streamlit dashboard with a Twitter sentiment analysis + deployment on Heroku
 
 ![app.png](app.png)
